@@ -1,0 +1,63 @@
+{
+  "devDependencies": {
+    "@morphic-ts/batteries": "^3.0.0",
+    "@morphic-ts/summoners": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.40.0",
+    "@typescript-eslint/parser": "^5.40.0",
+    "@vitest/coverage-c8": "^0.24.1",
+    "eslint": "^8.25.0",
+    "eslint-config-chimeraant": "^1.1.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-fp-ts": "^0.3.2",
+    "eslint-plugin-functional": "^4.4.1",
+    "eslint-plugin-only-warn": "^1.0.3",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "husky": "^8.0.1",
+    "nazna-tsconfig": "^1.0.0",
+    "pnpm": "^7.13.4",
+    "prettier": "^2.7.1",
+    "typescript-language-server": "^2.0.1",
+    "vite": "^3.1.7",
+    "vitest": "^0.24.1"
+  },
+  "peerDependencies": {
+    "@morphic-ts/batteries": "^3.0.0",
+    "@morphic-ts/summoners": "^3.0.0"
+  },
+  "scripts": {
+    "build": "vite build && tsc --emitDeclarationOnly",
+    "fix": "format-package --write && eslint --max-warnings=0 --ext .ts . --fix",
+    "lint": "format-package --check && eslint --max-warnings=0 --ext .ts .",
+    "test": "vitest"
+  },
+  "name": "make-union-morphic-ts",
+  "version": "0.0.0-semantic-release",
+  "license": "MIT",
+  "repository": "https://github.com/chimeraant/nazna.git",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/make-union-morphic-ts.umd.js",
+  "module": "./dist/make-union-morphic-ts.mjs",
+  "exports": {
+    "import": "./dist/make-union-morphic-ts.mjs",
+    "require": "./dist/make-union-morphic-ts.umd.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "eslintConfig": {
+    "extends": "chimeraant"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ]
+  }
+}
