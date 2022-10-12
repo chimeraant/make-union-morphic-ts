@@ -28,8 +28,8 @@
   },
   "scripts": {
     "build": "vite build && tsc --emitDeclarationOnly",
-    "fix": "format-package --write && eslint --max-warnings=0 --ext .ts . --fix",
-    "lint": "format-package --check && eslint --max-warnings=0 --ext .ts .",
+    "fix": "eslint --max-warnings=0 --ext .ts . --fix",
+    "lint": "eslint --max-warnings=0 --ext .ts .",
     "test": "vitest"
   },
   "name": "make-union-morphic-ts",
