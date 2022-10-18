@@ -6,8 +6,7 @@
     "@swc/core": "^1.3.8",
     "@vitest/coverage-c8": "^0.24.1",
     "eslint": "^8.25.0",
-    "nazna": "^1.3.5",
-    "nazna-tsconfig": "^1.0.0",
+    "nazna": "^1.4.0",
     "pnpm": "^7.13.4",
     "typescript": "^4.8.4",
     "vitest": "^0.24.1"
@@ -18,13 +17,14 @@
   },
   "scripts": {
     "build": "pnpm build:types && pnpm build:es6 && pnpm build:cjs && nazna build cli",
+    "build:cjs": "swc src --out-dir dist/cjs --source-maps --config module.type=commonjs",
+    "build:es6": "swc src --out-dir dist/es6 --source-maps",
+    "build:types": "tsc src/**.ts --outDir dist/types --skipLibCheck --declaration --declarationMap --emitDeclarationOnly --esModuleInterop",
     "fix": "eslint --max-warnings=0 --ext .ts . --fix",
     "lint": "eslint --max-warnings=0 --ext .ts .",
-    "test": "vitest",
-    "build:es6": "swc src --out-dir dist/es6 --source-maps",
-    "build:cjs": "swc src --out-dir dist/cjs --source-maps --config module.type=commonjs",
-    "build:types": "tsc src/**.ts --outDir dist/types --skipLibCheck --declaration --declarationMap --emitDeclarationOnly --esModuleInterop",
-    "postinstall": "nazna fix"
+    "postinstall": "nazna fix",
+    "pre-push": "CI=true pnpm install && pnpm build && pnpm lint && pnpm publish --dry-run",
+    "test": "vitest"
   },
   "name": "make-union-morphic-ts",
   "version": "0.0.0-semantic-release",
