@@ -1,6 +1,7 @@
 .direnv
 .eslintrc.json
 .nazna
+.npmrc
 .releaserc.json
 dist
 node_modules
