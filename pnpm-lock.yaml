@@ -7,7 +7,7 @@ specifiers:
   '@swc/core': ^1.3.8
   '@vitest/coverage-c8': ^0.24.1
   eslint: ^8.25.0
-  nazna: ^1.5.17
+  nazna: ^1.5.23
   pnpm: ^7.13.4
   typescript: ^4.8.4
   vitest: ^0.24.1
@@ -19,7 +19,7 @@ devDependencies:
   '@swc/core': 1.3.9
   '@vitest/coverage-c8': 0.24.1
   eslint: 8.25.0
-  nazna: 1.5.17_qumvyhy52jzb3nmhzzsi4k3ife
+  nazna: 1.5.23_6mftewipmblfdwwatnn3er6q7i
   pnpm: 7.13.4
   typescript: 4.8.4
   vitest: 0.24.1
@@ -1821,8 +1821,8 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /nazna/1.5.17_qumvyhy52jzb3nmhzzsi4k3ife:
-    resolution: {integrity: sha512-Qw1eaWrKwHmCayxbSWlP9Re5gI8IdsBq32iLMCrUAVOf3mLlNaibvJAzO6OFlCFoycT+TtNLqvc6B5/jTe0Aug==}
+  /nazna/1.5.23_6mftewipmblfdwwatnn3er6q7i:
+    resolution: {integrity: sha512-RctF6TuDo0x1/XJREqxVDJvHm6+hKMn89F13oblTXwV4OoEif5I5buIm0764ykIJ2BxSd0TNouoJEHYU8550hw==}
     hasBin: true
     dependencies:
       '@morphic-ts/batteries': 3.0.0_ijxaxaqzvtydjr7nx22rxz23xi
@@ -1836,8 +1836,11 @@ packages:
       eslint-plugin-prettier: 4.2.1_hvbqyfstm4urdpm6ffpwfka4e4
       eslint-plugin-simple-import-sort: 8.0.0_eslint@8.25.0
       eslint-plugin-unused-imports: 2.0.0_flxewya73otdbjwmwobuymqcuq
+      fast-equals: 2.0.4
       fp-ts: 2.13.1
       fp-ts-std: 0.15.0_sddbbwftoqt3d5g3p7ix53ouca
+      io-ts: 2.2.19_fp-ts@2.13.1
+      io-ts-types: 0.5.19_inkmjz2pkgjcbv54elgduozr7u
       js-yaml: 4.1.0
       monocle-ts: 2.3.13_fp-ts@2.13.1
       newtype-ts: 0.3.5_y4ecnzjsatnzoei5elwf4wjeqa
@@ -1846,10 +1849,7 @@ packages:
     transitivePeerDependencies:
       - eslint
       - fast-check
-      - fast-equals
       - fp-ts-contrib
-      - io-ts
-      - io-ts-types
       - supports-color
       - tsutils
       - typescript
