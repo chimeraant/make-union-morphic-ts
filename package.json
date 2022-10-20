@@ -30,7 +30,7 @@
   "name": "make-union-morphic-ts",
   "version": "0.0.0-semantic-release",
   "license": "MIT",
-  "repository": "https://github.com/chimeraant/nazna.git",
+  "repository": "https://github.com/chimeraant/make-union-morphic-ts",
   "types": "./dist/types/index.d.ts",
   "main": "./dist/cjs/index.js",
   "module": "./dist/es6/index.js",
