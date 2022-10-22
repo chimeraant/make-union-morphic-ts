@@ -7,7 +7,7 @@ specifiers:
   '@swc/core': ^1.3.8
   '@vitest/coverage-c8': ^0.24.1
   eslint: ^8.25.0
-  nazna: ^1.10.1
+  nazna: ^1.13.3
   pnpm: ^7.13.4
   typescript: ^4.8.4
   vitest: ^0.24.1
@@ -19,7 +19,7 @@ devDependencies:
   '@swc/core': 1.3.9
   '@vitest/coverage-c8': 0.24.1
   eslint: 8.25.0
-  nazna: 1.10.1_6mftewipmblfdwwatnn3er6q7i
+  nazna: 1.13.3_6mftewipmblfdwwatnn3er6q7i
   pnpm: 7.13.4
   typescript: 4.8.4
   vitest: 0.24.1
@@ -1865,8 +1865,8 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /nazna/1.10.1_6mftewipmblfdwwatnn3er6q7i:
-    resolution: {integrity: sha512-+satbaIViWG3bgOhbfZxL2uTw6zMoSfZNG0+ULoIQW2A1MWA13aNCZ72WcBZlQzaKHG5wCCj/JmDKuhECCBW9Q==}
+  /nazna/1.13.3_6mftewipmblfdwwatnn3er6q7i:
+    resolution: {integrity: sha512-396cw2C8gOD72VXNfsBH9uMEbGZQdNHo1BJ5YppUNR7friTs6PdESWmxTxWf5jQhGhAuLyvU2BtL44z3NGkCXg==}
     hasBin: true
     dependencies:
       '@morphic-ts/batteries': 3.0.0_ijxaxaqzvtydjr7nx22rxz23xi
