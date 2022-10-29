@@ -24,12 +24,27 @@ export type TypeOf<
   readonly Union: UnionType;
 };
 
-export const makeUnion =
-  <ProgURI extends ProgramURI, InterpURI extends InterpreterURI, R>(
-    summ: <E, A>(F: TaggedUnionProg<R, E, A, ProgURI>) => Materialized<R, E, A, ProgURI, InterpURI>
-  ) =>
-  <Tag extends string>(tag: Tag) =>
-  <Types extends UnionTypes<Types, Tag, ProgURI, InterpURI, R>>(types: Types) => ({
-    ...types,
-    Union: makeTagged_(summ)(tag)(types),
-  });
+export type MakeUnion = <ProgURI extends ProgramURI, InterpURI extends InterpreterURI, R>(
+  summ: <E, A>(F: TaggedUnionProg<R, E, A, ProgURI>) => Materialized<R, E, A, ProgURI, InterpURI>
+) => <Tag extends string>(
+  tag: Tag
+) => <Types extends UnionTypes<Types, Tag, ProgURI, InterpURI, R>>(
+  types: Types
+) => Types & {
+  readonly Union: import('@morphic-ts/summoners/lib/tagged-union').MorphADT<
+    {
+      readonly [k in keyof Types]: Types[k] extends InhabitedTypes<any, infer E_1, infer A_2>
+        ? readonly [E_1, A_2]
+        : never;
+    },
+    Tag,
+    ProgURI,
+    InterpURI,
+    R
+  >;
+};
+
+export const makeUnion: MakeUnion = (summ) => (tag) => (types) => ({
+  ...types,
+  Union: makeTagged_(summ)(tag)(types),
+});
